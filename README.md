@@ -1,2 +1,5 @@
 # trab_final_front_grupo7
 Trabalho do grupo 7 da disciplina de FrontEnd Essencial
+
+Grupo 7
+LORRANE ALÓ CRUZ, GELVERSON TIAGO SIQUEIRA DOS SANTOS, GABRIEL MAROCHI SCHMIDT, PEDRO HENRIQUE SANTOS RIBEIRO, NATÁLIA DA SILVA SIQUEIRA
