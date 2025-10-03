@@ -1,9 +1,9 @@
 /*Estilos Gerais*/
-body {
+html, body {
+  height: 100%;
   margin: 0;
-  font-family: 'Arial', sans-serif;
-  background: #fff8fa; 
-  color: #333;
+  display: flex;
+  flex-direction: column;
 }
 
 /*Cabeçalho*/
@@ -52,76 +52,34 @@ nav ul li a:hover {
   color: #ffe4ec; 
 }
 
-/*Banner*/
-.banner {
+/*Banner Produtos*/
+.banner-produtos {
   text-align: center;
   padding: 2rem 1rem;
   background: #ffe4ec; 
   border-bottom: 3px solid #ffb6c1;
 }
 
-.banner h1 {
+.banner-produtos h1 {
   margin: 0;
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: #cc3366; 
 }
 
-.banner p {
+.banner-produtos p {
   margin-top: 0.5rem;
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #555;
 }
 
-/*Produtos*/
 main {
-  padding: 1rem;
-  text-align: center;
+  flex: 1;
 }
 
-main h2 {
-  margin-bottom: 1rem;
-  color: #cc3366;
-}
-
-.produtos {
-  display: grid;
-  gap: 1rem;
-}
-
-.produto {
-  background: white;
-  border-radius: 10px;
-  padding: 1rem;
-  text-align: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease;
-}
-
-.produto:hover {
-  transform: scale(1.03);
-}
-
-.produto img {
-  width: 80%;
-  border-radius: 10px;
-}
-
-.produto h3 {
-  margin: 0.5rem 0;
-  color: #cc3366;
-}
-
-.produto p {
-  color: #444;
-  font-weight: bold;
-}
-
-/*Rodapé*/
 footer {
   background: #ffb6c1;
   text-align: center;
   padding: 1rem;
-  margin-top: 2rem;
   color: #cc3366;
   font-weight: bold;
 }
@@ -129,4 +87,6 @@ footer {
 button {
   background-color: #ffb6c1
 }
+
+
 
