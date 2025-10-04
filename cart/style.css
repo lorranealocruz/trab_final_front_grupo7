@@ -1,0 +1,72 @@
+/* Fundo e estilo geral */
+body {
+  background-color: #fff8fa;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Banner */
+.banner-carrinho {
+  background-color: #ffe4ec;
+  text-align: center;
+  padding: 2rem 1rem;
+  border-bottom: 3px solid #ffb6c1;
+}
+
+.banner-carrinho h1 {
+  color: #cc3366;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.banner-carrinho p {
+  color: #555;
+  margin-top: 0.5rem;
+}
+
+/* Tabela */
+.table-pink {
+  background-color: #ffb6c1 !important;
+  color: #cc3366;
+}
+
+.table td, .table th {
+  vertical-align: middle;
+}
+
+/* Botões e resumo */
+.cart-summary {
+  margin-top: 1.5rem;
+}
+
+.btn-primary {
+  background-color: #ffb6c1 !important;
+  border-color: #cc3366 !important;
+  color: #000 !important;
+  font-weight: bold;
+}
+
+.btn-primary:hover {
+  color: white !important;
+  background-color: #ff99b7 !important;
+}
+
+/* Rodapé */
+footer {
+  background-color: #ffb6c1;
+  color: #cc3366;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
+  font-weight: bold;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .banner-carrinho h1 {
+    font-size: 1.4rem;
+  }
+  .table {
+    font-size: 0.9rem;
+  }
+}
