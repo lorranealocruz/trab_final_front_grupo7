@@ -126,7 +126,59 @@ footer {
   font-weight: bold;
 }
 
-button {
-  background-color: #ffb6c1
+section {
+  color: #cc3366
 }
+
+/* Tablets*/
+  @media (max-width: 1024px) {
+  .produtos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .banner h1 {
+    font-size: 1.5rem;
+  }
+
+  .banner p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Smartphones*/
+  @media (max-width: 600px) {
+  .produtos {
+    grid-template-columns: 1fr;
+  }
+
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul {
+    display: block;
+  }
+
+  nav ul li {
+    margin: 5px 0;
+  }
+
+  .banner {
+    padding: 1.5rem 0.5rem;
+  }
+
+  .banner h1 {
+    font-size: 1.2rem;
+  }
+
+  .banner p {
+    font-size: 0.85rem;
+  }
+
+  footer {
+    font-size: 0.9rem;
+  }
+}
+
 
