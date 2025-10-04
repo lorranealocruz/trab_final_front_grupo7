@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seu Carrinho - SerraCat</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <h1>🐾 SerraCat - Carrinho de Compras</h1>
+    <nav>
+      <a href="../home/index.html" class="btn btn-primary" style="display: flex; align-items: center; gap: 8px; font-size: 1.1rem;">
+        <span class="bi bi-house-door-fill" aria-hidden="true"></span> 🏠 Home
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="carrinho">
+      <h2>🛍️ Itens no Carrinho</h2>
+      <div id="lista-carrinho" class="lista-carrinho">
+        <!-- Itens serão inseridos dinamicamente -->
+      </div>
+    </section>
+
+    <aside id="resumo" class="resumo">
+      <h3>Resumo da Compra</h3>
+      <p>Subtotal: R$ <span id="subtotal">0.00</span></p>
+      <p>Impostos (8%): R$ <span id="imposto">0.00</span></p>
+      <p>Frete: R$ <span id="frete">0.00</span></p>
+      <hr />
+      <p><strong>Total: R$ <span id="total">0.00</span></strong></p>
+    </aside>
+
+    <section class="checkout">
+      <h2>💳 Finalizar Compra</h2>
+      <form id="form-checkout">
+        <label for="nome">Nome completo:</label>
+        <input type="text" id="nome" name="nome" required />
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="endereco">Endereço de entrega:</label>
+        <textarea id="endereco" name="endereco" required></textarea>
+
+        <label for="pagamento">Meio de pagamento:</label>
+        <select id="pagamento" name="pagamento" required>
+          <option value="pix">Pix</option>
+          <option value="cartao">Cartão de Crédito</option>
+          <option value="boleto">Boleto Bancário</option>
+        </select>
+
+        <button type="submit">Finalizar Pedido</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 SerraCat | Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
