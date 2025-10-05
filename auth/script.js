@@ -1,0 +1,1 @@
+const basic_url = "https://68e1e3048943bf6bb3c5202f.mockapi.io/api/v1/user"
