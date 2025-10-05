@@ -142,19 +142,6 @@ button {
 	color: #fff !important;
 	font-weight: bold;
 	box-shadow: 0 2px 8px rgba(37,99,235,0.08);
-  /*margin: 0 0 0 50px;*/
-}
-
-button:hover {
-  background-color: #cc3366 !important;
-}
-
-footer {
-  background-color: #ffb6c1;
-  color: #cc3366;
-  text-align: center;
-  padding: 1rem;
-  margin-top: 3rem;
-  font-weight: bold;
+  margin: 0 0 0 50px;
 }
 
