@@ -2,13 +2,13 @@
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
-  background: #fff8fa; 
-  color: #333;
+  background: #ffb6c1; 
+  color: #000;
 }
 
 /*Cabeçalho*/
 header {
-  background: #e0e7ef;
+  background: #ffb6c1;
   padding: 1rem;
   display: flex;
   justify-content: space-between;
@@ -57,19 +57,19 @@ nav ul li a:hover {
   text-align: center;
   padding: 2rem 1rem;
   background: #ffe4ec; 
-  border-bottom: 3px solid #2563eb;
+  border-bottom: 3px solid #000;
 }
 
 .banner h1 {
   margin: 0;
   font-size: 1.8rem;
-  color: #2563eb;
+  color: #000000;
 }
 
 .banner p {
   margin-top: 0.5rem;
   font-size: 1rem;
-  color: #555;
+  color: #8d2626;
 }
 
 /*Produtos*/
@@ -80,7 +80,7 @@ main {
 
 main h2 {
   margin-bottom: 1rem;
-  color: #2563eb;
+  color: black;
 }
 
 .produtos {
@@ -108,21 +108,11 @@ main h2 {
 
 .produto h3 {
   margin: 0.5rem 0;
-  color: #2563eb;
+  color: #810432;
 }
 
 .produto p {
   color: #444;
-  font-weight: bold;
-}
-
-/*Rodapé*/
-footer {
-  background: #2563eb;
-  text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
-  color: #cc3366;
   font-weight: bold;
 }
 
@@ -143,6 +133,16 @@ section {
   .banner p {
     font-size: 0.9rem;
   }
+}
+
+/* Rodapé */
+footer {
+  background-color: #ffb6c1;
+  color: #cc3366;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
+  font-weight: bold;
 }
 
 /* Smartphones*/
