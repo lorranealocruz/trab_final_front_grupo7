@@ -24,10 +24,10 @@ async function register(event) {
       headers: {
         "Content-Type": "application/json"
       }
-    });
+    });    
     const users = await response.json();
-
-    if (users.length > 0) {
+    
+    if (users != "Not found") {
       alert("Este e-mail já está cadastrado.");
       return;
     }
@@ -70,8 +70,8 @@ async function login(event) {
       }
     });
     const users = await response.json();
-
-    if (users.length === 0) {
+    console.log(users);
+    if (users == "Not found") {
       alert("E-mail não encontrado.");
       return;
     }
