@@ -78,8 +78,6 @@ const impostoEl = document.getElementById("imposto");
 const freteEl = document.getElementById("frete");
 const totalEl = document.getElementById("total");
 
-// Eventos de interatividade
-
 // DELETE: Remover item do carrinho
 document.addEventListener("click", (e) => {
   if (e.target.classList.contains("remover-btn")) {
@@ -103,7 +101,9 @@ document.addEventListener("change", (e) => {
 atualizarCarrinho();
 
 // Finalizar compra
+
 const formCheckout = document.getElementById("form-checkout");
+
 formCheckout.addEventListener("submit", function(e) {
   e.preventDefault();
   if (carrinho.length === 0) {
@@ -118,14 +118,35 @@ formCheckout.addEventListener("submit", function(e) {
   let meioPagamento = "";
   if (pagamento === "pix") meioPagamento = "Pix";
   else if (pagamento === "cartao") meioPagamento = "Cartão de Crédito";
-  else if (pagamento === "boleto") meioPagamento = "Boleto Bancário";
+  else if (pagamento === "boleto") meioPagamento = "Cartão Débito";
+  else if (pagamento === "Dinheiro") meioPagamento = "Dinheiro";
 
-  alert(`🎉 Compra finalizada com sucesso!\nObrigado por comprar na SerraCat!\n\nNome: ${nome}\nE-mail: ${email}\nEndereço: ${endereco}\nPagamento: ${meioPagamento}`);
+  const mensagemFinalizacao = document.getElementById("mensagem-finalizacao");
+  const textoFinalizacao = document.getElementById("texto-finalizacao");
+  mensagemFinalizacao.style.display = "block";
+  textoFinalizacao.innerHTML = `
+    🎉 <strong>Compra finalizada com sucesso!</strong><br>
+    Obrigado por comprar na SerraCat!<br><br>
+    <strong>Nome:</strong> ${nome}<br>
+    <strong>E-mail:</strong> ${email}<br>
+    <strong>Endereço:</strong> ${endereco}<br>
+    <strong>Pagamento:</strong> ${meioPagamento}
+  `;
+
   localStorage.removeItem("carrinho");
   carrinho = [];
   atualizarCarrinho();
   formCheckout.reset();
 });
 
-// Atualiza quando abrir a página
-atualizarCarrinho();
+
+document.addEventListener("DOMContentLoaded", function() {
+  const btnContinuar = document.getElementById("btn-continuar");
+  if (btnContinuar) {
+    btnContinuar.addEventListener("click", function() {
+      document.getElementById("mensagem-finalizacao").style.display = "none";
+      window.location.href = "../home/index.html"; 
+      //esse codigo acima leva para a tela inicial após finalizae a compra
+    });
+  }
+});
