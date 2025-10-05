@@ -1,3 +1,29 @@
+document.addEventListener('DOMContentLoaded', () => {
+  const loggedUser = JSON.parse(sessionStorage.getItem('loggedUser'));
+
+  if (!loggedUser) {
+    window.location.href = '../auth/pages/login.html';
+    return; 
+  }
+
+  const userLinks = document.getElementById('user-links');
+  if (userLinks) {
+    userLinks.innerHTML = `
+      <li class="nav-item">
+        <a class="nav-link" href="../auth/pages/edit.html">Olá, ${loggedUser.name}</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" onclick="logout()">Sair</a>
+      </li>
+    `;
+  }
+});
+
+function logout() {
+  sessionStorage.removeItem('loggedUser');
+  window.location.href = '../auth/pages/login.html';
+}
+
 const botoesCarrinho = document.querySelectorAll(".card button");
 
 botoesCarrinho.forEach((botao) => {

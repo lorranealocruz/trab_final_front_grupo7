@@ -1,6 +1,5 @@
 const base_url = "https://68e1e3048943bf6bb3c5202f.mockapi.io/api/v1/user";
 
-// Função de Registro
 async function register(event) {
   event.preventDefault();
 
@@ -20,8 +19,12 @@ async function register(event) {
   }
 
   try {
-    // Verificar se o e-mail já está em uso
-    const response = await fetch(`${base_url}?email=${email}`);
+    const response = await fetch(`${base_url}?email=${email}`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json"
+      }
+    });
     const users = await response.json();
 
     if (users.length > 0) {
@@ -29,7 +32,6 @@ async function register(event) {
       return;
     }
 
-    // Se o e-mail não estiver em uso, prosseguir com o cadastro
     const userData = { name, email, password };
     const postResponse = await fetch(base_url, {
       method: "POST",
@@ -49,7 +51,6 @@ async function register(event) {
   }
 }
 
-// Função de Login
 async function login(event) {
   event.preventDefault();
 
@@ -62,7 +63,12 @@ async function login(event) {
   }
 
   try {
-    const response = await fetch(`${base_url}?email=${email}`);
+    const response = await fetch(`${base_url}?email=${email}`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json"
+      }
+    });
     const users = await response.json();
 
     if (users.length === 0) {
@@ -76,7 +82,6 @@ async function login(event) {
       return;
     }
 
-    // Armazenar dados do usuário na sessionStorage
     sessionStorage.setItem('loggedUser', JSON.stringify(user));
     alert("Login bem-sucedido!");
     window.location.href = "../../home/index.html";
@@ -87,14 +92,12 @@ async function login(event) {
   }
 }
 
-// Função de Logout
 function logout() {
   sessionStorage.removeItem('loggedUser');
   alert("Você foi desconectado.");
   window.location.href = "./login.html";
 }
 
-// Carregar dados do usuário para a página de edição
 function loadUserDataForEdit() {
   const loggedUser = JSON.parse(sessionStorage.getItem('loggedUser'));
 
@@ -108,7 +111,6 @@ function loadUserDataForEdit() {
   document.getElementById('email').value = loggedUser.email;
 }
 
-// Função para atualizar o usuário
 async function updateUser(event) {
   event.preventDefault();
 
@@ -126,7 +128,6 @@ async function updateUser(event) {
 
   const updatedData = { name, email };
 
-  // Lógica para alteração de senha
   if (newPassword) {
     if (!currentPassword) {
       alert("Para definir uma nova senha, você deve fornecer sua senha atual.");
@@ -148,7 +149,7 @@ async function updateUser(event) {
 
     if (response.ok) {
       const updatedUser = await response.json();
-      sessionStorage.setItem('loggedUser', JSON.stringify(updatedUser)); // Atualiza a sessão
+      sessionStorage.setItem('loggedUser', JSON.stringify(updatedUser));
       alert("Perfil atualizado com sucesso!");
     } else {
       alert("Erro ao atualizar o perfil. Tente novamente.");
@@ -159,7 +160,6 @@ async function updateUser(event) {
   }
 }
 
-// Adiciona um listener para carregar os dados do usuário ao carregar a página de edição
 document.addEventListener('DOMContentLoaded', () => {
   if (window.location.pathname.endsWith('edit.html')) {
     loadUserDataForEdit();
