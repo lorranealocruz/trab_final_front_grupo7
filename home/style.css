@@ -58,7 +58,6 @@ nav ul li a:hover {
 .banner_principal {
   position: relative;
   width: 100vw;
-  margin-top: 70px;
 }
 
 .banner_principal img {
@@ -163,6 +162,15 @@ footer {
 
 /* Smartphones*/
   @media (max-width: 600px) {
+  .carousel-item .d-flex {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .carousel-item .card {
+    margin-bottom: 1rem;
+  }
+
   .produtos {
     display: flex;
     flex-direction: column;
