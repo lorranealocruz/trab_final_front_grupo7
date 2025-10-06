@@ -1,0 +1,86 @@
+/* Estilos para páginas de autenticação */
+body {
+  background-color: #f5f7fa;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.auth-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.auth-form {
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  max-width: 450px;
+  width: 100%;
+}
+
+.auth-form h1 {
+  color: #810432;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.auth-form p {
+  text-align: center;
+  color: #cc3366;
+  margin-bottom: 2rem;
+}
+
+.form-label {
+  color: #000;
+  font-weight: 500;
+}
+
+.form-control:focus {
+  border-color: #000;
+  box-shadow: 0 0 0 0.25rem rgba(37, 99, 235, 0.2);
+}
+
+
+.btn-primary {
+  background-color: #f07ea0 !important;
+  border-color: #cc3366 !important;
+  padding: 0.75rem;
+  font-weight: bold;
+}
+
+.btn-primary:hover {
+  background-color: #cc3366 !important;
+}
+
+.footer {
+  background-color: #ffb6c1;
+  color: #cc3366;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Estilo da Navbar */
+.navbar {
+    background-color: #ffb6c1;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.navbar-brand {
+    color: #cc3366 !important;
+    font-weight: bold;
+}
+
+.nav-link {
+    color: #333 !important;
+}
+
+.nav-link.active {
+    color:  #cc3366 !important;
+    font-weight: 500;
+}

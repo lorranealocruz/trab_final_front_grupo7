@@ -1,0 +1,47 @@
+
+/* Paleta moderna e acessível */
+body {
+  background-color: #f5f7fa;
+  color: #222;
+}
+
+header, footer {
+  background-color: #2563eb;
+  color: #fff;
+}
+
+.btn-primary {
+  background-color: #cc3366 !important;
+  border-color: #cc3366 !important;
+  color: #fff !important;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(37,99,235,0.08);
+}
+
+.btn-primary:hover {
+  background-color: #a70784 !important;
+  border-color: #a70784 !important;
+  color: #fff !important;
+}
+
+.resumo, .checkout, .carrinho {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+label {
+  font-weight: 500;
+  color: #2563eb;
+}
+
+input, textarea, select {
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  font-size: 1rem;
+}

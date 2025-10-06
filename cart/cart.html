@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seu Carrinho - SerraCat</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="../assets/favicon2.ico" type="ico">
+</head>
+
+<body>
+  <header>
+    <h1>🐾 SerraCat - Carrinho de Compras</h1>
+    <nav>
+      <a href="../home/index.html" class="btn btn-primary" style="display: flex; align-items: center; gap: 8px; font-size: 1.1rem;">
+        <span class="bi bi-house-door-fill" aria-hidden="true"></span> 🏠 Pagina inicial
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="carrinho">
+      <h2>🛍️ Itens no Carrinho:</h2>
+      <div id="lista-carrinho" class="lista-carrinho">
+      </div>
+    </section>
+
+    <aside id="resumo" class="resumo">
+      <h3>Resumo da Compra:</h3>
+      <p>Subtotal: R$ <span id="subtotal">0.00</span></p>
+      <p>Impostos (8%): R$ <span id="imposto">0.00</span></p>
+      <p>Frete: R$ <span id="frete">0.00</span></p>
+      <hr />
+      <p><strong>Total: R$ <span id="total">0.00</span></strong></p>
+    </aside>
+
+    <section class="checkout">
+      <h2>💳 Finalizar Compra</h2>
+      <form id="form-checkout">
+        <label for="nome">Nome completo:</label>
+        <input type="text" id="nome" name="nome" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="endereco">Endereço de entrega:</label>
+        <textarea id="endereco" name="endereco" required></textarea>
+
+        <label for="pagamento">Meio de pagamento:</label>
+        <select id="pagamento" name="pagamento" required>
+          <option value="pix">Pix</option>
+          <option value="cartao">Cartão de Crédito</option>
+          <option value="boleto">Cartão Débito</option>
+          <option value="boleto">Dinheiro</option>
+
+        </select>
+
+        <button type="submit">Finalizar Pedido</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 SerraCat | Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+  
+  <script src="script.js"></script>
+  <div id="mensagem-finalizacao" style="display:none; text-align:center; padding:24px; background:#fff; border-radius:12px; box-shadow:0 2px 8px #0002; position:fixed; top:20%; left:50%; transform:translateX(-50%); z-index:1000;">
+    <p id="texto-finalizacao"></p>
+    <button id="btn-continuar" style="margin-top:16px; padding:8px 24px; border:none; background:#1976d2; color:#fff; border-radius:6px; cursor:pointer;">Continuar comprando</button>
+  </div>
+</body>
+</html>
