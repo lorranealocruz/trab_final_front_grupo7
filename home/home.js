@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
   const loggedUser = JSON.parse(sessionStorage.getItem('loggedUser'));
 
-  /*if (!loggedUser) {
+  if (!loggedUser) {
     window.location.href = '../auth/pages/login.html';
     return; 
-  }*/
+  }
 
   const userLinks = document.getElementById('user-links');
   if (userLinks) {

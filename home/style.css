@@ -2,8 +2,8 @@
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
-  background: #fff; 
-  color: #000;
+  background: #ffb6c1; 
+  color: #a70784;
 }
 
 /*Cabeçalho*/
@@ -13,6 +13,9 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 20;
 }
 
 header .logo {
@@ -49,8 +52,22 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #ffe4ec; 
+  color: #ffb6c1; 
 }
+
+.banner_principal {
+  position: relative;
+  width: 100%;
+  height: 400px; 
+}
+
+.banner_principal img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 
 /*Banner*/
 .banner {
@@ -143,17 +160,6 @@ footer {
   padding: 1rem;
   margin-top: 3rem;
   font-weight: bold;
-}
-
-.btn.btn-primary {
-  background-color: #ffb6c1; 
-  color: #000;           
-  border: none;             
-}
-
-.btn.btn-primary:hover {
-  background-color: #ff9eb3; 
-  color: #000;
 }
 
 /* Smartphones*/

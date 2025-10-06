@@ -11,16 +11,16 @@ header, footer {
 }
 
 .btn-primary {
-  background-color: #2563eb !important;
-  border-color: #1e40af !important;
+  background-color: #cc3366 !important;
+  border-color: #cc3366 !important;
   color: #fff !important;
   font-weight: bold;
   box-shadow: 0 2px 8px rgba(37,99,235,0.08);
 }
 
 .btn-primary:hover {
-  background-color: #1e40af !important;
-  border-color: #1e40af !important;
+  background-color: #a70784 !important;
+  border-color: #a70784 !important;
   color: #fff !important;
 }
 

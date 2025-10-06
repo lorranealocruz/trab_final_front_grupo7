@@ -1,5 +1,4 @@
-/* Fundo e estilo geral */
-body {
+* Fundo e estilo geral * / body {
   background-color: #fff8fa;
   color: #333;
   font-family: 'Arial', sans-serif;
@@ -30,7 +29,8 @@ body {
   color: #cc3366;
 }
 
-.table td, .table th {
+.table td,
+.table th {
   vertical-align: middle;
 }
 
@@ -66,7 +66,88 @@ footer {
   .banner-carrinho h1 {
     font-size: 1.4rem;
   }
+
   .table {
     font-size: 0.9rem;
+  }
+}
+
+.checkout {
+  background-color: #ffe4ec;
+  /* fundo rosinha, combinando com o tema */
+  padding: 2rem 1rem;
+  border-radius: 12px;
+  margin-top: 2rem;
+  max-width: 600px;
+  margin-inline: auto;
+  box-shadow: 0 2px 6px #0001;
+}
+
+.checkout h2 {
+  text-align: center;
+  color: #cc3366;
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+}
+
+/* Formulário - MOBILE FIRST (coluna) */
+#form-checkout {
+  display: flex;
+  flex-direction: column;
+  /* 🔸 empilha os campos um embaixo do outro */
+  gap: 1rem;
+  /* espaço entre campos */
+}
+
+#form-checkout label {
+  font-weight: bold;
+  color: #444;
+}
+
+#form-checkout input,
+#form-checkout textarea,
+#form-checkout select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+/* Ajuste do botão */
+#form-checkout button {
+  background-color: #cc3366;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#form-checkout button:hover {
+  background-color: #a12b53;
+}
+
+/* 🔸 Responsivo - organiza melhor em telas maiores */
+@media (min-width: 768px) {
+  #form-checkout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  /* nome e email lado a lado */
+  #nome,
+  #email {
+    grid-column: span 1;
+  }
+
+  /* endereço, pagamento e botão ocupam linha inteira */
+  #endereco,
+  #pagamento,
+  #form-checkout button {
+    grid-column: span 2;
   }
 }
