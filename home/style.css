@@ -58,6 +58,7 @@ nav ul li a:hover {
 .banner_principal {
   position: relative;
   width: 100vw;
+  margin-top: 70px;
 }
 
 .banner_principal img {
